@@ -28,8 +28,24 @@ function escape_html(string) {
     });
 }
 
+function openAllTabForSession(e) {
+    let now = this;
+    while (!now.classList.contains("session")) {
+        now = now.parentNode;
+    }
+
+    const link_url_list = getAllTabUrl(now);
+    allOpenLink(link_url_list);
+}
+
+
 function openAllTabForDevice(e) {
-    const link_url_list = getAllTabUrl(this.parentNode);
+    let now = this;
+    while (!now.classList.contains("device")) {
+        now = now.parentNode;
+    }
+
+    const link_url_list = getAllTabUrl(now);
     allOpenLink(link_url_list);
 }
 
@@ -70,7 +86,7 @@ window.onload = function () {
             const device_name = result.deviceName;
             // https://qiita.com/fukasawah/items/db7f0405564bdc37820e
             const device_uniq_key = `${device_name}_${Math.random().toString(32).substring(2)}`;
-            main.insertAdjacentHTML('beforeend', `<div id="${device_uniq_key}"></div>`);
+            main.insertAdjacentHTML('beforeend', `<div id="${device_uniq_key}" class="device"></div>`);
 
             const div = document.getElementById(device_uniq_key);
 
@@ -105,12 +121,17 @@ window.onload = function () {
                             <h4 class="uk-card-title uk-margin-remove-bottom">セッション${i + 1}</h4>
                             <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">${tabs.length}個のタブ</p>
                             <p class="uk-text-meta uk-margin-remove-top">セッションID: ${session.window.sessionId}</p>
+                            <div class="uk-grid">
+                                <div class="uk-width-auto"><span class="session_tab_link_open uk-link">このセッションのすべてのリンクを開く</span></div>
+                                <div class="uk-width-expand"></div>
+                            </div>
                         </div>
                         <div class="uk-card-body">
                             <ul>${tabs_html}</ul>
                         </div>
                     </div>`;
                 div.insertAdjacentHTML('beforeend', insertHtml);
+                div.getElementsByClassName("session_tab_link_open")[0].addEventListener("click", openAllTabForSession);
             }
         });
     });
