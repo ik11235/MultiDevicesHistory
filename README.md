@@ -13,7 +13,10 @@ Chrome標準の履歴は直近使用したタブのみ表示されますが、�
 
 Coming Soon.
 
-## ライセンス
+# チェンジログ
+[CHANGELOG](CHANGELOG.md)
+
+# ライセンス
 
 [MIT](LICENSE)
 
