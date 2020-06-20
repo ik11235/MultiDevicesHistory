@@ -20,7 +20,7 @@ Coming Soon.
 
 [MIT](LICENSE)
 
-## アイコン
+# アイコン
 
 この拡張のアプリアイコンは[ICOON MONO様](https://icooon-mono.com/)の以下の素材を使用しています。
 
@@ -30,7 +30,7 @@ Coming Soon.
 - [Free desktop PC icon](https://icooon-mono.com/11043-free-desktop-pc-icon/)
 - [リロードアイコン](https://icooon-mono.com/15804-%e3%83%aa%e3%83%ad%e3%83%bc%e3%83%89%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b3/)
 
-### generate comand
+## generate comand
 
 ```shell script
 #!/bin/bash
@@ -43,7 +43,7 @@ done
 
 参考: https://qiita.com/ygkn/items/efa1e311006f5c900123
 
-## 使用しているライブラリ
+# 使用しているライブラリ
 
 - [UIkit](https://getuikit.com/)
 
