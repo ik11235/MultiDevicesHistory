@@ -8,8 +8,6 @@
     "tabs"
   ],
   "browser_action": {
-    "default_title": "Tab cast",
-    "default_popup": "main.html",
     "default_icon": {
       "16": "images/icon.png"
     }

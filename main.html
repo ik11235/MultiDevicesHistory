@@ -1,9 +1,31 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>chrome.displaySource API test</title>
-    <script src='main.js'></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Multi Devices History</title>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/uikit.min.css"/>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
 </head>
 <body>
-<div id='deviceList'></div>
+<div class="uk-container">
+    <div class="uk-grid">
+        <div class="uk-width-1-1">
+            <div id="header">
+                <h1 class='uk-heading-primary uk-heading-divider'>
+                    <img src="images/icon.svg" width="32" height="32"/>
+                    MultiDevicesHistory
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-grid main-contents">
+        <div class="uk-width-expand" id="main"></div>
+    </div>
+</div>
+
+<div id="footer"></div>
 </body>
 </html>
