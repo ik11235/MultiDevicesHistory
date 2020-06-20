@@ -13,9 +13,3 @@ chrome.sessions.getDevices(function (results) {
     });
     console.log(results);
 });
-
-
-// Error この方法ではsessionのtabは閉じれない
-chrome.tabs.remove("session_sync4076705350322316997-256457446.13259", function (result) {
-    console.log(result);
-});
