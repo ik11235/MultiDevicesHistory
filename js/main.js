@@ -28,12 +28,56 @@ function escape_html(string) {
     });
 }
 
+function openAllTabForDevice(e) {
+    const link_url_list = getAllTabUrl(this.parentNode);
+    allOpenLink(link_url_list);
+}
+
+function getAllTabUrl(element) {
+    return Array.from(element.getElementsByClassName("tab_link")).map(
+        function (link) {
+            return link.href;
+        });
+}
+
+function createTabs(properties) {
+    return new Promise((resolve, reject) => {
+        chrome.tabs.create(properties, () => {
+            const error = chrome.runtime.lastError;
+            if (error) {
+                reject(error);
+            } else {
+                resolve();
+            }
+        });
+    });
+}
+
+function allOpenLink(link_list) {
+    let promiseArray = [];
+    link_list.forEach(function (link) {
+        promiseArray.push(createTabs({url: link, active: false}));
+    });
+    Promise.all(promiseArray).catch(function (reason) {
+        alert(reason);
+    });
+}
+
 window.onload = function () {
     chrome.sessions.getDevices(function (results) {
         const main = document.getElementById('main');
         results.forEach(function (result) {
             const device_name = result.deviceName;
-            main.insertAdjacentHTML('beforeend', `<h3>${device_name}</h3>`);
+            // https://qiita.com/fukasawah/items/db7f0405564bdc37820e
+            const device_uniq_key = `${device_name}_${Math.random().toString(32).substring(2)}`;
+            main.insertAdjacentHTML('beforeend', `<div id="${device_uniq_key}"></div>`);
+
+            const div = document.getElementById(device_uniq_key);
+
+            div.insertAdjacentHTML('beforeend', `<h3>${device_name}</h3>`);
+            const click_id = `${device_uniq_key}_click`;
+            div.insertAdjacentHTML('beforeend', `<a id="${click_id}">${device_name}のすべてのタブを開く</a>`);
+            document.getElementById(click_id).addEventListener("click", openAllTabForDevice);
 
             const sessions = result.sessions;
             for (let i = 0; i < sessions.length; i++) {
@@ -66,7 +110,7 @@ window.onload = function () {
                             <ul>${tabs_html}</ul>
                         </div>
                     </div>`;
-                main.insertAdjacentHTML('beforeend', insertHtml);
+                div.insertAdjacentHTML('beforeend', insertHtml);
             }
         });
     });
