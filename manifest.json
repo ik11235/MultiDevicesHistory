@@ -9,7 +9,7 @@
   ],
   "browser_action": {
     "default_icon": {
-      "16": "images/icon.png"
+      "16": "images/icon16.png"
     }
   },
   "background": {
@@ -19,9 +19,9 @@
     "persistant": false
   },
   "icons": {
-    "16": "images/icon.png",
-    "32": "images/icon.png",
-    "48": "images/icon.png",
-    "128": "images/icon.png"
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
   }
 }
