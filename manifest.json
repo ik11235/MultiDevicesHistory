@@ -1,8 +1,8 @@
 {
-  "name": "chrome-multi-decices-history",
+  "name": "MultiDecicesHistory",
   "version": "0.1",
   "manifest_version": 2,
-  "description": "test",
+  "description": "同じgoogleアカウントでログインしているデバイスで開いているタブを一覧表示できるChrome拡張です。スマホのChromeの情報も取得できるのでスマホのChromeで開きすぎたタブの整理にも使えます。",
   "permissions": [
     "sessions",
     "tabs"
