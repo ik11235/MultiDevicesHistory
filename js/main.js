@@ -31,10 +31,8 @@ function escape_html(string) {
 window.onload = function () {
     chrome.sessions.getDevices(function (results) {
         const main = document.getElementById('main');
-        console.log(main);
         results.forEach(function (result) {
             const device_name = result.deviceName;
-            console.log(device_name);
             main.insertAdjacentHTML('beforeend', `<h3>${device_name}</h3>`);
 
             const sessions = result.sessions;
@@ -72,5 +70,4 @@ window.onload = function () {
             }
         });
     });
-    console.log(results);
 }
