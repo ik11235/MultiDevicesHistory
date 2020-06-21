@@ -11,7 +11,7 @@ Chrome標準の履歴は直近使用したタブのみ表示されますが、�
 
 # インストール
 
-Coming Soon.
+[MultiDevicesHistory \- Chrome ウェブストア](https://chrome.google.com/webstore/detail/multideviceshistory/mggidkmjmkmieppeppenbnoklkfmkceo)
 
 # チェンジログ
 [CHANGELOG](CHANGELOG.md)
