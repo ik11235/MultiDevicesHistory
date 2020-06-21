@@ -37,11 +37,11 @@ Coming Soon.
 
 for size in 16 32 48 128;
 do
-    convert source.png -resize ${size}x  -unsharp 1.5x1+0.7+0.02 icon${size}.png;
+    convert source.png -resize ${size}x${size} -extent ${size}x${size} -background white -gravity center -unsharp 1.5x1+0.7+0.02 icon${size}.png;
 done
 ```
 
-参考: https://qiita.com/ygkn/items/efa1e311006f5c900123
+参考: https://qiita.com/ygkn/items/efa1e311006f5c900123 , https://takuya-1st.hatenablog.jp/entry/2016/09/27/165629
 
 # 使用しているライブラリ
 
