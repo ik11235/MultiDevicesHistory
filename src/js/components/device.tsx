@@ -1,5 +1,6 @@
 import React from 'react';
 import Session from "./sesstion";
+import {util} from "../util";
 
 interface DeviceProps {
     device: chrome.sessions.Device;
@@ -9,7 +10,7 @@ const Device: React.FC<DeviceProps> = (props) => {
 
     const device_name = props.device.deviceName
     const openAllTabForDevice = () => {
-
+        props.device.sessions.forEach(util.openSessionAllPage);
     }
 
     return (

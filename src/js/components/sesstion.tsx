@@ -1,5 +1,6 @@
 import React from 'react';
 import {Tab} from './tab';
+import {util} from "../util";
 
 interface SessionProps {
     Session: chrome.sessions.Session;
@@ -12,25 +13,7 @@ const Session: React.FC<SessionProps> = (props) => {
     const sessionId = window.sessionId!;
 
     const openAllTab = () => {
-        chrome.windows.create((window) => {
-            for (let i = 0; i < tabs.length; i++) {
-                const tab = tabs[i]!;
-                if (i == 0) {
-                    const nowTabs = window!.tabs!
-                    console.log(nowTabs);
-                    console.log("now");
-                    if (nowTabs.length > 0) {
-                        // @ts-ignore
-                        const tabId = nowTabs[0].id!;
-                        const properties = {url: tab.url, active: false}
-                        chrome.tabs.update(tabId, properties);
-                    }
-                } else {
-                    const properties = {windowId: window!.id, url: tab.url, active: false}
-                    chrome.tabs.create(properties);
-                }
-            }
-        });
+        util.openSessionAllPage(props.Session)
     };
 
     return (
