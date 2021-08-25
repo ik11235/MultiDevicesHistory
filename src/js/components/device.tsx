@@ -8,15 +8,15 @@ interface DeviceProps {
 
 const Device: React.FC<DeviceProps> = (props) => {
 
-    const device_name = props.device.deviceName
+    const deviceName = props.device.deviceName
     const openAllTabForDevice = () => {
         props.device.sessions.forEach(util.openSessionAllPage);
     }
 
     return (
         <div className="device">
-            <h3>{device_name}</h3>
-            <a onClick={openAllTabForDevice}>{device_name}のすべてのタブを開く</a>
+            <h3>{deviceName}</h3>
+            <a onClick={openAllTabForDevice}>{deviceName}のすべてのタブを開く</a>
             {props.device.sessions.map((session, index) => {
                return <Session Session={session} index={index} key={session.window?.sessionId!}/>
             })}
