@@ -1,6 +1,6 @@
 # MultiDevicesHistory
 
-![icon](https://github.com/ik11235/MultiDevicesHistory/raw/master/images/icon128.png)
+![icon](https://github.com/ik11235/MultiDevicesHistory/raw/master/src/images/icon128.png)
 
 # about
 
@@ -48,4 +48,3 @@ done
 - [UIkit](https://getuikit.com/)
 
 - [使用ライブラリのライセンスクレジット一覧](CREDITS)
-
