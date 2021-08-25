@@ -45,26 +45,30 @@ export namespace util {
    * @param {Session} session 対象のsession
    */
   export function openSessionAllPage(session: chrome.sessions.Session): void {
-      const tabs = session.window?.tabs!
+    const tabs = session.window?.tabs!;
 
-      chrome.windows.create((window) => {
-          for (let i = 0; i < tabs.length; i++) {
-              const tab = tabs[i]!;
-              if (i == 0) {
-                  const nowTabs = window!.tabs!
-                  console.log(nowTabs);
-                  console.log("now");
-                  if (nowTabs.length > 0) {
-                      // @ts-ignore
-                      const tabId = nowTabs[0].id!;
-                      const properties = {url: tab.url, active: false}
-                      chrome.tabs.update(tabId, properties);
-                  }
-              } else {
-                  const properties = {windowId: window!.id, url: tab.url, active: false}
-                  chrome.tabs.create(properties);
-              }
+    chrome.windows.create((window) => {
+      for (let i = 0; i < tabs.length; i++) {
+        const tab = tabs[i]!;
+        if (i == 0) {
+          const nowTabs = window!.tabs!;
+          console.log(nowTabs);
+          console.log('now');
+          if (nowTabs.length > 0) {
+            // @ts-ignore
+            const tabId = nowTabs[0].id!;
+            const properties = { url: tab.url, active: false };
+            chrome.tabs.update(tabId, properties);
           }
-      });
+        } else {
+          const properties = {
+            windowId: window!.id,
+            url: tab.url,
+            active: false,
+          };
+          chrome.tabs.create(properties);
+        }
+      }
+    });
   }
 }
