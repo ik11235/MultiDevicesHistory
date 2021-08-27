@@ -1,6 +1,6 @@
 {
-  "name": "MultiDevicesHistory-DEV",
-  "version": "0.2",
+  "name": "MultiDevicesHistory",
+  "version": "0.3",
   "manifest_version": 2,
   "description": "__MSG_Description__",
   "default_locale": "en",
