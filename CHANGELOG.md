@@ -1,6 +1,6 @@
 # v0.3 (2021/08/27)
 
-- [FIX] Reactベースにrebuild
+- [FIX] React ベースに rebuild
 - [NEW] 多言語対応
 
 # v0.2 (2020/06/21)
