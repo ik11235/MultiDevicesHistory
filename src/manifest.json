@@ -1,8 +1,9 @@
 {
-  "name": "MultiDevicesHistory",
+  "name": "MultiDevicesHistory-DEV",
   "version": "0.2",
   "manifest_version": 2,
-  "description": "同じgoogleアカウントでログインしているデバイスで開いているタブを一覧表示できるChrome拡張です。スマホのChromeの情報も取得できるのでスマホのChromeで開きすぎたタブの整理にも使えます。",
+  "description": "__MSG_Description__",
+  "default_locale": "en",
   "permissions": ["sessions", "tabs"],
   "browser_action": {
     "default_icon": {

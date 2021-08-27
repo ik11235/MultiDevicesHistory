@@ -1,0 +1,30 @@
+{
+  "Description": {
+    "message": "This is a Chrome extension that allows you to list tabs that are open on devices that are logged in with the same google account."
+  },
+  "content_msg_device_all_tab_open": {
+    "message": "Open all tabs of $deviceName$",
+    "placeholders": {
+      "deviceName": {
+        "content": "$1"
+      }
+    }
+  },
+  "content_msg_session": {
+    "message": "session "
+  },
+  "content_msg_tab_length": {
+    "message": "$length$ Tabs",
+    "placeholders": {
+      "length": {
+        "content": "$1"
+      }
+    }
+  },
+  "content_msg_session_io": {
+    "message": "session ID: "
+  },
+  "content_msg_session_all_tab_open": {
+    "message": "Open all tabs of this session"
+  }
+}

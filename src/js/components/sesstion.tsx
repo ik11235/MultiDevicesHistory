@@ -20,13 +20,13 @@ const Session: React.FC<SessionProps> = (props) => {
     <div className="session uk-card-default">
       <div className="uk-card-header">
         <h4 className="uk-card-title uk-margin-remove-bottom">
-          {'セッション ' + props.index}
+          {chrome.i18n.getMessage('content_msg_session') + props.index}
         </h4>
         <p className="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">
-          {tabs.length}個のタブ
+          {chrome.i18n.getMessage('content_msg_tab_length', [tabs.length])}
         </p>
         <p className="uk-text-meta uk-margin-remove-top">
-          セッションID: {sessionId}
+          {chrome.i18n.getMessage('content_msg_session_io') + sessionId}
         </p>
         <div className="uk-grid">
           <div className="uk-width-auto">
@@ -34,7 +34,7 @@ const Session: React.FC<SessionProps> = (props) => {
               className="session_tab_link_open uk-link"
               onClick={openAllTab}
             >
-              このセッションのすべてのリンクを開く
+              {chrome.i18n.getMessage('content_msg_session_all_tab_open')}
             </span>
           </div>
           <div className="uk-width-expand" />

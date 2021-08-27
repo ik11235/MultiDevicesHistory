@@ -15,7 +15,11 @@ const Device: React.FC<DeviceProps> = (props) => {
   return (
     <div className="device">
       <h3>{deviceName}</h3>
-      <a onClick={openAllTabForDevice}>{deviceName}のすべてのタブを開く</a>
+      <a onClick={openAllTabForDevice}>
+        {chrome.i18n.getMessage('content_msg_device_all_tab_open', [
+          deviceName,
+        ])}
+      </a>
       {props.device.sessions.map((session, index) => {
         return (
           <Session
