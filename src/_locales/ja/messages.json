@@ -1,9 +1,9 @@
 {
   "Description": {
-    "message": "This is a Chrome extension that allows you to list tabs that are open on devices that are logged in with the same google account."
+    "message": "同じgoogleアカウントでログインしているデバイスで開いているタブを一覧表示できるChrome拡張です。スマホのChromeの情報も取得できるのでスマホのChromeで開きすぎたタブの整理にも使えます。"
   },
   "content_msg_device_all_tab_open": {
-    "message": "Open all tabs of $deviceName$",
+    "message": "$deviceName$のすべてのタブを開く",
     "placeholders": {
       "deviceName": {
         "content": "$1"
@@ -11,10 +11,10 @@
     }
   },
   "content_msg_session": {
-    "message": "session "
+    "message": "セッション "
   },
   "content_msg_tab_length": {
-    "message": "$length$ Tabs",
+    "message": "$length$個のタブ",
     "placeholders": {
       "length": {
         "content": "$1"
@@ -22,9 +22,9 @@
     }
   },
   "content_msg_session_io": {
-    "message": "session ID: "
+    "message": "セッションID: "
   },
   "content_msg_session_all_tab_open": {
-    "message": "Open all tabs of this session"
+    "message": "このセッションのすべてのリンクを開く"
   }
 }
