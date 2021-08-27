@@ -1,0 +1,30 @@
+{
+  "Description": {
+    "message": "同じgoogleアカウントでログインしているデバイスで開いているタブを一覧表示できるChrome拡張です。スマホのChromeの情報も取得できるのでスマホのChromeで開きすぎたタブの整理にも使えます。"
+  },
+  "content_msg_device_all_tab_open": {
+    "message": "$deviceName$のすべてのタブを開く",
+    "placeholders": {
+      "deviceName": {
+        "content": "$1"
+      }
+    }
+  },
+  "content_msg_session": {
+    "message": "セッション "
+  },
+  "content_msg_tab_length": {
+    "message": "$length$個のタブ",
+    "placeholders": {
+      "length": {
+        "content": "$1"
+      }
+    }
+  },
+  "content_msg_session_io": {
+    "message": "セッションID: "
+  },
+  "content_msg_session_all_tab_open": {
+    "message": "このセッションのすべてのリンクを開く"
+  }
+}

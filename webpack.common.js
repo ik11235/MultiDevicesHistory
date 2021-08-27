@@ -47,6 +47,11 @@ module.exports = {
           from: '*',
           to: path.join(__dirname, 'dist/images/'),
         },
+        {
+          context: 'src/_locales',
+          from: '*/*',
+          to: path.join(__dirname, 'dist/_locales/'),
+        },
       ],
     }),
   ],
