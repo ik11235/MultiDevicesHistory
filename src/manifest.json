@@ -3,19 +3,14 @@
   "version": "0.2",
   "manifest_version": 2,
   "description": "同じgoogleアカウントでログインしているデバイスで開いているタブを一覧表示できるChrome拡張です。スマホのChromeの情報も取得できるのでスマホのChromeで開きすぎたタブの整理にも使えます。",
-  "permissions": [
-    "sessions",
-    "tabs"
-  ],
+  "permissions": ["sessions", "tabs"],
   "browser_action": {
     "default_icon": {
       "16": "images/icon16.png"
     }
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["js/background.js"],
     "persistant": false
   },
   "icons": {

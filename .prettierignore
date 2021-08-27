@@ -1,0 +1,7 @@
+package.json
+package-lock.json
+
+**/uikit-rtl.css
+**/uikit-rtl.min.css
+**/uikit.css
+**/uikit.min.css
