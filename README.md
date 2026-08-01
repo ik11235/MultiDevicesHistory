@@ -1,5 +1,12 @@
 # MultiDevicesHistory
 
+> [!IMPORTANT]
+> **この拡張機能は開発を終了しました（2026-08）。**
+>
+> 本拡張の目的だった「別デバイスで開いているタブの一括表示・一括オープン」は、現在の Chrome では標準機能で代替可能です（履歴 → 「他のデバイスからのタブ」 → 各セッションのメニューから「すべて開く」、またはタブ検索メニュー Ctrl/Cmd+Shift+A）。
+>
+> また、本拡張は Manifest V2 のままであり、Chrome 138 以降 MV2 拡張は無効化され、2026 年 8 月末に Chrome ウェブストアからも削除されるため、以降は動作・入手できません。このリポジトリはアーカイブ済みです。
+
 ![icon](https://github.com/ik11235/MultiDevicesHistory/raw/master/src/images/icon128.png)
 
 # about
